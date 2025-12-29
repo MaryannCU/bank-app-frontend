@@ -126,7 +126,7 @@ jobs:
       - name: Clone Kubernetes manifests repo
         env:
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
-          GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+          GIT_PASSWORD: ${{ secrets.GIT_TOKEN }}
         run: |
           git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/MaryannCU/kubernetes-manifest.git
           cd kubernetes-manifest
