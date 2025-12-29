@@ -11,7 +11,7 @@ on:
 
 jobs:
   Continues-Integration_build_and_push:
-    runs-on: [self-hosted, deploy] 
+    runs-on: ubuntu-latest 
 
     steps:
     - name: Checkout repository
@@ -54,7 +54,7 @@ jobs:
 
   
   Continues-Update_k8s_manifest:
-    runs-on: [self-hosted, deploy] 
+    runs-on: ubuntu-latest 
     needs: Continues-Integration_build_and_push
     steps:
     - name: Checkout repository.
